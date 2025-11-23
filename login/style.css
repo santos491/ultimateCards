@@ -15,8 +15,9 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Fondo gris muy claro */
+     /* Fondo gris muy claro */
     color: var(--text-dark);
+    background-color: #0099ff;
 }
 
 /* CONTENEDOR PRINCIPAL: Centra todo el contenido en la página */
@@ -189,4 +190,5 @@ body {
     .login-card {
         padding: 30px 25px;
     }
+
 }
