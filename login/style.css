@@ -1,0 +1,192 @@
+/* VARIABLES y RESET BÁSICO */
+:root {
+    --primary-black: #000;
+    --text-dark: #333;
+    --text-medium: #555;
+    --border-light: #ddd;
+    --link-blue: #007bff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Fondo gris muy claro */
+    color: var(--text-dark);
+}
+
+/* CONTENEDOR PRINCIPAL: Centra todo el contenido en la página */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.login-content {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Importante para los bordes redondeados */
+}
+
+/* 1. ESTILOS DEL FORMULARIO (Columna Izquierda) */
+.login-card {
+    flex: 1; /* Ocupa el 50% del ancho en escritorio */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.card-header .greeting {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: var(--text-medium);
+    margin-bottom: 5px;
+}
+
+.card-header h1 {
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+.card-header .subtitle {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--text-medium);
+}
+
+.login-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+/* Estilo de los campos de texto */
+.login-form input[type="text"],
+.login-form .password-field input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-light);
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.login-form input:focus {
+    border-color: var(--primary-black);
+}
+
+/* Campo de Contraseña con icono */
+.password-field {
+    position: relative;
+}
+
+.password-field .toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-medium);
+}
+
+/* Fila de Opciones (Recordar/Olvidaste) */
+.options-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    font-size: 0.9em;
+}
+
+.checkbox-container input {
+    margin-right: 5px;
+}
+
+.forgot-link {
+    color: var(--text-medium);
+    text-decoration: none;
+}
+
+.forgot-link:hover {
+    text-decoration: underline;
+}
+
+/* Botón de Login */
+.login-button {
+    width: 100%;
+    background-color: var(--primary-black);
+    color: var(--text-light);
+    border: none;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #333;
+}
+
+/* Texto de Registro */
+.register-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.95em;
+}
+
+.register-text a {
+    color: var(--primary-black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* 2. ESTILOS DE LA IMAGEN (Columna Derecha) */
+.image-container {
+    flex: 1; /* Ocupa el 50% del ancho en escritorio */
+    background-color: #f5f5f5; /* Fondo gris claro detrás del logo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    /* Ajuste para que el placeholder simule el logo */
+    border-radius: 50%; 
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptación a dispositivos móviles (Responsividad) */
+@media (max-width: 850px) {
+    .login-content {
+        flex-direction: column; /* Apila las columnas */
+        max-width: 500px;
+    }
+
+    .image-container {
+        padding: 30px 20px;
+        order: -1; /* Mueve la imagen arriba en móviles */
+    }
+
+    .login-card {
+        padding: 30px 25px;
+    }
+}

@@ -1,0 +1,365 @@
+/* VARIABLES y RESET BÁSICO */
+:root {
+    --header-blue: #007bff; /* Azul brillante del header y botones */
+    --footer-blue: #0056b3; /* Azul oscuro del footer */
+    --search-box-blue: #007bff;
+    --filter-button-color: #d11270; /* Color magenta de los botones de filtro */
+    --text-dark: #333;
+    --text-light: #fff;
+    --border-light: #eee;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: var(--text-dark);
+}
+
+.main-content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* 1. ESTILO DEL ENCABEZADO Y NAVBAR RESPONSIVO */
+header {
+    background-color: var(--header-blue);
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+/* Ocultar el botón de hamburguesa por defecto en escritorio */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-light);
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* Enlaces de Navegación (Estilo de escritorio) */
+.nav-bar .nav-links {
+    list-style: none;
+    display: flex; /* Horizontal en escritorio */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-bar .nav-links li a {
+    color: var(--text-light);
+    text-decoration: none;
+    padding: 0 15px;
+    font-weight: 600;
+}
+
+.login-btn {
+    color: var(--text-light);
+    font-size: 0.9em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-btn .fa-circle {
+    color: #ffc107;
+    margin-right: 5px;
+    font-size: 0.8em;
+}
+
+/* 2. SECCIÓN INTRODUCTORIA */
+.intro-section {
+    max-width: 800px;
+    margin: 30px auto 50px;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* 3. SECCIÓN DE BÚSQUEDA Y CARTA DESTACADA */
+.search-and-featured-section {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.search-filter-box {
+    flex: 1;
+    background-color: var(--search-box-blue);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter-box h2 {
+    color: var(--text-light);
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.filter-button {
+    width: 100%;
+    background-color: rgb(241, 241, 236);
+    color: black;
+    border: none;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.action-button {
+    width: 100%;
+    background-color: var(--text-light);
+    color: var(--search-box-blue);
+    border: none;
+    padding: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.featured-card-box {
+    flex: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(226, 62, 62);
+}
+
+.featured-card-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* 4. SECCIÓN DE PASOS/PROCESO */
+.process-steps {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    margin-bottom: 70px;
+    padding: 20px 0;
+    border-top: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+}
+
+.step-item {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #777;
+    padding: 10px;
+}
+
+/* 5. SECCIÓN DE ARTÍCULOS/VENTAJAS */
+.featured-articles-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: var(--text-dark);
+}
+
+.article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 70px;
+    
+}
+
+.article-item {
+    text-align: center;
+}
+
+.article-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgb(127, 144, 223);
+}
+
+.article-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.article-date {
+    font-size: 0.9em;
+    color: #999;
+}
+
+/* 6. PIE DE PÁGINA (FOOTER) */
+.footer {
+    background-color: #0099ff;
+    color: #ffffff;
+    width: 100%;
+    padding: 3rem 2rem 1rem;
+    position: relative;
+}
+
+.scroll-top-button {
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top-button:hover,
+.scroll-top-button:focus {
+    transform: translateY(-4px);
+}
+
+.scroll-top-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url("img/icon-arrow-up.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-address {
+    font-style: normal;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+
+/* --- MEDIA QUERIES PARA RESPONSIVIDAD --- */
+
+@media (max-width: 768px) {
+    /* Navbar Responsivo */
+    .menu-toggle {
+        display: block; /* Mostrar el botón de hamburguesa */
+    }
+
+    .nav-bar {
+        flex-wrap: wrap; /* Permite que los elementos se apilen */
+        padding: 0 20px 15px;
+    }
+
+    /* Enlaces de Navegación (Por defecto, ocultos y apilados) */
+    .nav-bar .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 10px;
+        background-color: var(--footer-blue);
+        border-radius: 5px;
+    }
+
+    /* Mostrar el menú cuando la clase 'active' está presente (activada por JS) */
+    .nav-bar .nav-links.active {
+        display: flex;
+    }
+
+    .nav-bar .nav-links li {
+        margin: 0;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .nav-bar .nav-links li:last-child {
+        border-bottom: none;
+    }
+    
+    .login-btn {
+        margin-left: auto; /* Empuja el login a la derecha, junto al botón de toggle */
+    }
+
+    /* Layouts principales */
+    .search-and-featured-section {
+        flex-direction: column;
+    }
+    .process-steps, .article-grid, .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .process-steps {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Layouts más pequeños */
+    .process-steps, .article-grid, .footer-container {
+        grid-template-columns: 1fr;
+    }
+}
+

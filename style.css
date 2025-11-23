@@ -1,0 +1,605 @@
+.cards {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.cards .header {
+    position: relative;
+    width: 1440px;
+    flex: 0 0 auto;
+}
+
+.cards .text-tabs-cards {
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.cards .image {
+    position: relative;
+    width: 1440px;
+    height: 268.56px;
+}
+
+.cards .footer {
+    position: relative;
+    flex: 0 0 auto;
+}
+
+/* Original CSS code should be injected here */
+
+/* Refactored and Enhanced Styles */
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header Styles */
+.header {
+    position: relative;
+    width: 100%;
+    max-width: 1440px;
+    flex: 0 0 auto;
+    background-color: #0099ff;
+    padding: 1rem 2rem;
+}
+
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    opacity: 0.8;
+}
+
+.white-session-btn {
+    background-color: #ffffff;
+    color: #0099ff;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.white-session-btn:hover,
+.white-session-btn:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Content Styles */
+.main-content {
+    width: 100%;
+    max-width: 1440px;
+    padding: 2rem;
+}
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+/* Tabs Navigation */
+.tabs-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    background-color: transparent;
+    border: none;
+    color: #666666;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover,
+.tab-button:focus {
+    color: #0099ff;
+}
+
+.tab-button-active {
+    background-color: #0099ff;
+    color: #ffffff;
+    border-radius: 20px;
+}
+
+.tab-button-active:hover,
+.tab-button-active:focus {
+    color: #ffffff;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Card Item */
+.card-item {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-item:hover,
+.card-item:focus-within {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper1 {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(209, 163, 13);
+}
+
+.card-image-wrapper2 {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(226, 62, 62);
+}
+
+.card-image-wrapper3 {
+    width: 100%;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: rgb(127, 144, 223);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+    
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.card-price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #6b4ce6;
+    margin: 0;
+}
+
+/* Card Attributes */
+.card-attributes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    padding: 0.5rem 0;
+}
+
+.attribute {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.attribute-icon {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.attribute-icon-level {
+    background-image: url("img/icon-level.png");
+}
+
+.attribute-icon-energy {
+    background-image: url("img/icon-energy.png");
+}
+
+.attribute-icon-power {
+    background-image: url("img/icon-power.png");
+}
+
+.attribute-label {
+    font-size: 0.875rem;
+    color: #666666;
+}
+
+/* Card Button */
+.card-button {
+    background-color: #0099ff;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+}
+
+.card-button:hover,
+.card-button:focus {
+    background-color: #0077cc;
+    transform: translateY(-2px);
+}
+
+/* Brands Section */
+.brands-section {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    width: 100%;
+}
+
+.brands-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.brand-logo {
+    height: 60px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.brand-logo:hover,
+.brand-logo:focus {
+    opacity: 1;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #0099ff;
+    color: #ffffff;
+    width: 100%;
+    padding: 3rem 2rem 1rem;
+    position: relative;
+}
+
+.scroll-top-button {
+    position: absolute;
+    top: -25px;
+    right: 50px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top-button:hover,
+.scroll-top-button:focus {
+    transform: translateY(-4px);
+}
+
+.scroll-top-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url("img/icon-arrow-up.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.footer-subheading {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.footer-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.footer-address {
+    font-style: normal;
+}
+
+.footer-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-link:hover,
+.footer-link:focus {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    display: block;
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover,
+.social-link:focus {
+    transform: scale(1.1);
+}
+
+.social-icon {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.social-icon-facebook {
+    background-image: url("images/facebook.png");
+}
+
+.social-icon-instagram {
+    background-image: url("images/instagram.png");
+}
+
+.social-icon-tiktok {
+    background-image: url("images/tik-tok.png");
+}
+
+.social-icon-youtube {
+    background-image: url("images/youtube.png");
+}
+
+/* Footer Navigation */
+.footer-nav {
+    margin-top: 0.5rem;
+}
+
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-nav-item {
+    display: block;
+}
+
+.footer-nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-nav-link:hover,
+.footer-nav-link:focus {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* App Buttons */
+.app-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.app-button {
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.app-button:hover,
+.app-button:focus {
+    transform: scale(1.05);
+}
+
+.app-button-image {
+    width: 150px;
+    height: auto;
+    display: block;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-nav {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .brands-container {
+        flex-direction: column;
+    }
+
+    .scroll-top-button {
+        right: 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Accessibility Enhancements */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Focus Styles */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid #4a90e2;
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+
+    .header,
+    .footer,
+    .scroll-top-button {
+        display: none;
+    }
+
+    .card-button {
+        display: none;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
